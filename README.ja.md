@@ -1,3 +1,3 @@
+![en](https://img.shields.io/badge/en-English-blue?link=%2FREADME.md)
 ![ko](https://img.shields.io/badge/ko-%ED%95%9C%EA%B5%AD%EC%96%B4-blue?link=%2FREADME.ko.md)
-![ja](https://img.shields.io/badge/ja-%E6%97%A5%E6%9C%AC%E8%AA%9E-blue?link=%2FREADME.ja.md)
 # Lipbalm Reminder

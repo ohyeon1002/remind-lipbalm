@@ -1,0 +1,10 @@
+{
+  "Layout": {
+    "title": "립밤 알리미",
+    "description": "정기적으로 림밥을 바를 시간을 알려줍니다."
+  },
+  "HomePage": {
+    "title": "립밤 바를 시간 등록",
+    "notifymebtn": "알림 받기"
+  }
+}

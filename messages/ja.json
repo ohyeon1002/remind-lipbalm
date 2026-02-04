@@ -1,0 +1,10 @@
+{
+  "Layout": {
+    "title": "リップ通知",
+    "description": "定期的にリップを塗る時間を通知します。"
+  },
+  "HomePage": {
+    "title": "リップのタイミングを登録",
+    "notifymebtn": "通知を受ける"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "Layout": {
+    "title": "Remind Lipbalm",
+    "description": "Notifies me to put a lipbalm regularly."
+  },
+  "HomePage": {
+    "title": "Notify me when it's time to put a lipbalm",
+    "notifymebtn": "Notify Me"
+  }
+}
