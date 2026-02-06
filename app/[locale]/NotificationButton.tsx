@@ -2,7 +2,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 // import saveSubscription from "../actions";
-import { logServer } from "../actions";
+import { pushToMe, logServer } from "../actions";
 
 function initialNotification() {
   new Notification("Title!!", { body: "body!!" });
@@ -43,6 +43,7 @@ export default function NotificationButton() {
       });
       try {
         await logServer(subscription.toJSON());
+        await pushToMe();
       } catch (e) {}
       // try {
       //   const result = await saveSubscription(subscription.toJSON());

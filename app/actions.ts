@@ -18,18 +18,18 @@ export async function logServer(subsJSON: PushSubscriptionJSON) {
   console.log(JSON.stringify(subsJSON));
 }
 
-// export async function pushToMe() {
-//   try {
-//     await webpush.sendNotification(
-//       MY_PHONE_SUB as any,
-//       JSON.stringify({
-//         title: "립밤",
-//         body: "바르자",
-//         icon: "/bell-256.png",
-//       }),
-//     );
-//     return { success: true };
-//   } catch (e) {
-//     return { success: false };
-//   }
-// }
+export async function pushToMe() {
+  const subcontent = process.env.MY_SUBSCRIPTION;
+  if (!subcontent) throw new Error("환경변수x");
+  const mySubs = JSON.parse(subcontent);
+  const payload = JSON.stringify({
+    title: "립밤",
+    body: "바르자",
+  });
+  try {
+    await webpush.sendNotification(mySubs, payload);
+    return { success: true };
+  } catch (e) {
+    return { success: false };
+  }
+}
