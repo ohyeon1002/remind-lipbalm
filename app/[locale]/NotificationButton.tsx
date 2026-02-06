@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 // import saveSubscription from "../actions";
+import { logServer } from "../actions";
 
 function initialNotification() {
   new Notification("Title!!", { body: "body!!" });
@@ -40,7 +41,9 @@ export default function NotificationButton() {
           NEXT_PUBLIC_VAPID_PUBLIC_KEY ? NEXT_PUBLIC_VAPID_PUBLIC_KEY : "",
         ),
       });
-      console.log(JSON.stringify(subscription.toJSON()));
+      try {
+        await logServer(subscription.toJSON());
+      } catch (e) {}
       // try {
       //   const result = await saveSubscription(subscription.toJSON());
       //   if (result.sucess) {
